@@ -1,0 +1,21 @@
+-var n=0
++b('section').gallery
+  +e.title Галерея
+  +e.list
+    while n < 3
+      +e.item
+        +e('a').item-link_logo.link(href="#")
+          +e('img').item-logo(src='/img/house_photo.jpg')
+        +e.item-description Описание элемента
+        +e.item-cost 5 420 000 руб.
+        +e('a').item-link_detail.link(href="#") Подробнее
+
+      +e.item
+        +e('a').item-link_logo.link(href="#")
+          +e('img').item-logo(src='/img/house_photo.jpg')
+        +e.item-description Описание элемента
+        +e.item-cost 7 #{n++}00 000 руб.
+        +e('a').item-link_detail.link(href="#") Подробнее
+
+
+

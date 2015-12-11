@@ -1,0 +1,11 @@
++b('section').slider
+  +e#js-slider.list
+    +e.item(data-cycle-desc="<span class='slider__item-name'>Заголовок</span><span class='slider__item-description'> описание слайда</span>", style='background: url(img/slide1.jpg) no-repeat center center; background-size: cover;')
+    .cycle-overlay
+  +e.pagination
+  +e.buttons
+    +b('span').button.slider__button_prev 
+      |&lt;
+    +b('span').button.slider__button_next 
+      |&gt;
+  +e.bottomline
