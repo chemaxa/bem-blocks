@@ -1,0 +1,44 @@
++b('table').calendar
+	+e('caption').title
+		+e.day Thu
+		+e.date-title_wrapper
+			+e.date-title_day 10
+			+e.date-title_inlined
+				+e.date-title_month December
+				+e.date-title_year 2015
+	+e('thead').thead
+		+e('tr')
+			+e('th').days-title
+				+e('span').icon_prev.icon-play_arrow
+			+e('th')(colspan=5).days-title
+				+e('span').month December 
+				+e('span').year 2015
+			+e('th').days-title
+				+e('span').icon_next.icon-play_arrow
+		+e('tr').days-name-list
+			+e('th').day-name Su
+			+e('th').day-name Mo
+			+e('th').day-name Tu
+			+e('th').day-name We
+			+e('th').day-name Th
+			+e('th').day-name Fr
+			+e('th').day-name Sa
+	+e('tbody').tbody
+		-var offset = -2
+		- for (var x = 0; x < 5; x++)
+			+e('tr').dates-list
+				- for (var k = offset; k < 8; k++)
+					if (x*7+k)<1
+						+e('td').date
+						- continue
+					if k>6+offset || k+x*7>31
+						-continue
+					if x*7+k==15
+						+e('td').date_active 
+							+b('a').link.calendar__link(href="#") #{x*7+k}
+					else
+						+e('td').date
+							+b('a').link.calendar__link(href="#") #{x*7+k}
+
+
+

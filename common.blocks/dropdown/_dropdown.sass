@@ -1,0 +1,24 @@
+.dropdown
+	position: absolute
+	top: 2rem
+	left: -2rem
+	margin: 0
+	padding: 0 2rem
+	list-style-type: none
+	display: none
+	@extend .inline-block
+	&_top
+		background-color: $color_top-menu-bg
+	&__link
+		@extend .inline-block
+		cursor: pointer
+		color: #fff
+		text-transform: uppercase
+		&:hover
+			text-decoration: none
+			color: #fff
+		&_toggle
+			position: relative
+			margin: 0 2.81rem
+			&:after
+				content: "\e907"

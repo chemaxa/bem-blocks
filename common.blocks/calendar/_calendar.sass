@@ -1,0 +1,65 @@
+.calendar
+	width: 100%
+	background-color: #4b4b4b
+	margin:  0 0 20px	
+	&__title
+		position: relative
+	&__day
+		background-color: #313131
+		color: #fff	
+		padding: 30px
+		font-size: 24px
+		float: left
+		width: 35%
+		border-right: 3px solid #6d6d6d
+		border-bottom: 3px solid #6d6d6d
+		/*Hack for filling element by height*/
+		position: absolute
+		top: 0
+		bottom: 0
+		&-name
+			color: #0c0c0c
+			&:first-child,&:last-child
+				color: #fff
+	&__link
+		color: #fff
+	&__icon
+		color: #fff
+		@extend .inline-block
+		&_prev
+			transform: rotate(180deg)
+	&__month,&__year
+		font-size: 18px
+		color: #fff
+	&__days-title
+		padding: 20px 0		
+	&__date
+		background-color: #4b4b4b
+		color: #fff
+		text-align: center
+		font-size: 17px
+		padding: 5px 10px
+		&_active
+			background-color: #313131
+			border-radius: 3px
+
+		&-title
+			background-color: #4b4b4b
+			color: #fff
+			&_inlined
+				@extend .inline-block
+				margin-top: 15px
+
+			&_wrapper
+				float: right
+				padding: 10px
+				width: 65%
+				border-bottom: 3px solid #6d6d6d
+			&_day
+				@extend .inline-block
+				font-size: 53px
+			&_month
+				font-size: 18px
+			&_year
+				font-size: 20px
+				min-width: 50px
